@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "fill pdf forms with supplied data",
   "license": "MIT",
   "main": "dist/index.js",
