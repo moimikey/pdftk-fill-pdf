@@ -5,12 +5,12 @@ import { promises as fsp } from 'fs';
 
 export type FillData = Record<string, string | number | boolean>;
 
-function _getRandomName() {
+function _getRandomName () {
   return `file_${Math.round(Math.random() * 10000)}`;
 }
 
 const pdfFill = {
-  fill: async function({
+  fill: async function ({
     data,
     pdfPath,
     tempPath,
@@ -54,7 +54,7 @@ const pdfFill = {
 
     return file;
   },
-  generateXfdf: async function({
+  generateXfdf: async function ({
     data,
     pdfPath,
   }: {
@@ -92,7 +92,7 @@ const pdfFill = {
       </xfdf>
     `;
   },
-  execPdftk(cmd: string, customExecOptions?: ExecOptions): Promise<string> {
+  execPdftk (cmd: string, customExecOptions?: ExecOptions): Promise<string> {
     const OPTIONS = {
       timeout: 100000,
       maxBuffer: 200 * 1024,
@@ -100,7 +100,7 @@ const pdfFill = {
     };
     console.log('cmd', cmd);
     return new Promise((resolve, reject) => {
-      exec(`pdftk ${cmd}`, OPTIONS, function(error, stdout, stderr) {
+      exec(`/tmp/bin/pdftk ${cmd}`, OPTIONS, function (error, stdout, stderr) {
         console.log(stdout);
         if (error) {
           console.error(error);
