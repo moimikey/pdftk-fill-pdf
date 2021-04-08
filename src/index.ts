@@ -100,7 +100,7 @@ const pdfFill = {
     };
     console.log('cmd', cmd);
     return new Promise((resolve, reject) => {
-      exec(`/tmp/bin/pdftk ${cmd}`, OPTIONS, function (error, stdout, stderr) {
+      exec(`pdftk ${cmd}`, OPTIONS, function (error, stdout, stderr) {
         console.log(stdout);
         if (error) {
           console.error(error);
