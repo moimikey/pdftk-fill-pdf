@@ -33,7 +33,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "pdftk-fill-pdf",
+  "name": "pdftk-fill-pdf2",
   "module": "dist/pdftk-fill-pdf.esm.js",
   "size-limit": [
     {
